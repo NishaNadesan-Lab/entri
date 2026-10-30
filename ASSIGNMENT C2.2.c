@@ -1,0 +1,40 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+
+#include <stdio.h>
+int main() 
+{
+int num, i, isPrime = 1;
+printf("Enter an integer: ");
+scanf("%d", &num);
+if (num <= 1)
+{
+isPrime = 0;
+} 
+else
+{
+  for (i = 2;i<= num/i;i++)
+  {
+    if (num%i==0)
+    {
+     isPrime = 0;
+     break;
+    }
+  }
+}
+if (isPrime==1)
+{
+printf("%d is a prime number.\n", num);
+} 
+else
+{
+printf("%d is not a prime number.\n", num);
+}
+return 0;
+}
